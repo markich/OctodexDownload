@@ -35,6 +35,12 @@ do
 	if [ $EXIT_CODE -gt 0 ];
 	then
 	    FINAL_URL="http://octodex.github.com/images/$name.jpg"
+	    wget --spider -r -l 1 $FINAL_URL
+		EXIT_CODE=$?
+		if [ $EXIT_CODE -gt 0 ];
+		then
+	    FINAL_URL="http://octodex.github.com/images/$name.gif"
+		fi
 	fi
 echo "\n Downloading $FINAL_URL \n"
 wget $FINAL_URL
