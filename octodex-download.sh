@@ -39,7 +39,7 @@ do
 		EXIT_CODE=$?
 		if [ $EXIT_CODE -gt 0 ];
 		then
-	    FINAL_URL="http://octodex.github.com/images/$name.gif"
+	    	FINAL_URL="http://octodex.github.com/images/$name.gif"
 		fi
 	fi
 echo "\n Downloading $FINAL_URL \n"
